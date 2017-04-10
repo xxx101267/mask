@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			.bj{
+				background: url(img/1.jpg) no-repeat;
+				-background-size: 400px 300px;
+				background-size: cover;
+				height:600px;
+				-webkit-mask: url(img/mask.png) no-repeat;
+				-webkit-mask-position: 0px 0px;
+
+			}
+			.wrap{
+				width:100%;
+				height:100%;
+				border: 1px solid black;
+			}
+			
+			
+
+		</style>
+	</head>
+	<body style="background-color: black;">
+		<div class="wrap">
+			<div class="bj" id="box"></div>
+		</div>
+		
+		<script>
+			var box = document.getElementById("box"); 
+		    document.onmousemove = function(ev){
+		    	box.style["-webkit-mask-position"] = (ev.clientX-110)+"px "+(ev.clientY-110)+"px";
+		    }
+		</script>
+
+	</body>
+</html>
